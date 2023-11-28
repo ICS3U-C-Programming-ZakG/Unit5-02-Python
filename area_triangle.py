@@ -10,7 +10,7 @@ def calc_area(base, height):
 
     # display area
     print(
-        "The area of a triangle with a height of {} and a base of {} is {}cm^2".format(
+        "The area of a triangle with a height of {:.2f} and a base of {:.2f} is {:.2f}cm^2".format(
             height, base, area
         )
     )
@@ -25,13 +25,13 @@ def main():
     user_height = input("Please enter a height: ")
     print()
 
-    # try converting input to integer
+    # try converting input to float
     try:
-        user_base_int = int(user_base)
+        user_base_int = float(user_base)
 
-        # try converting second input to integer
+        # try converting second input to float
         try:
-            user_height_int = int(user_height)
+            user_height_int = float(user_height)
 
             # check if numbers are greater than zero
             if (user_base_int > 0) and (user_height_int > 0):
@@ -40,7 +40,7 @@ def main():
 
             # tell user no negatives
             else:
-                print("You must input integers greater than zero.")
+                print("You must input numbers greater than zero.")
 
         # catch invalid inputs
         except Exception:
